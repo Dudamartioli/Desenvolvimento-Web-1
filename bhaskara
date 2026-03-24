@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <h1>Bhaskara:)</h1>
+    <label for="inputA">A</label>
+    <input type="number" id="inputA" value="inputA" placeholder="digite o termo A">
+    <br>
+    <label for="inputB">B</label>
+    <input type="number" id="inputB" value="inputB" placeholder="digite o termo B">
+    <br>
+    <label for="inputC">C</label>
+    <input type="number" id="inputC" value="inputC" placeholder="digite o termo C">
+    <br>
+    <input type="button" value="Calcular" onclick="fcalcular()">
+    <br>
+    <span id="resp"></span>
+
+    <script>
+        function fcalcular(){
+            let a= parseFloat(document.getElementById("inputA").value)
+            let b= parseFloat(document.getElementById("inputB").value)
+            let c= parseFloat(document.getElementById("inputC").value)
+            let respM = (-b+Math.sqrt(b**2-4*a*c))/(2*a)
+            let respN = (-b-Math.sqrt(b**2-4*a*c))/(2*a)
+            document.getElementById("resp").innerHTML= "X1 = " + respM + "<br>" + "X2 = " + respN
+        }
+    </script>
+</body>
+</html>
