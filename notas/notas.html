@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="notas.css"> 
+</head>
+<body>
+    <h1>Média de aproveitamento</h1>
+    
+    <label for="inputra">RA:</label>
+    <input type="number" id="inputra">
+    <br>
+    <label for="inputnome">Nome:</label>
+    <input type="text" id="inputnome">
+    <br>
+    <label for="input1">Nota 1:</label>
+    <input type="number" id="input1">
+    <br>
+    <label for="input2">Nota 2:</label>
+    <input type="number" id="input2">
+    <br>
+    <label for="input3">Nota 3:</label>
+    <input type="number" id="input3">
+    <br>
+    <label for="input4">Nota 4:</label>
+    <input type="number" id="input4">
+    <br>
+    <label for="inputme">Média exercícios:</label>
+    <input type="number" id="inputme">
+    <br>
+    <input type="button" value="calcular" onclick="fcalcular()">
+    <br>
+    <br>
+    <span id="resp"></span>
+
+    <script>
+        function fcalcular(){
+            let ra=parseInt(document.getElementById("inputra").value)
+            let nome=document.getElementById("inputnome").value
+            let n1=parseInt(document.getElementById("input1").value)
+            let n2=parseInt(document.getElementById("input2").value)
+            let n3=parseInt(document.getElementById("input3").value)
+            let n4=parseInt(document.getElementById("input4").value)
+            let me=parseInt(document.getElementById("inputme").value)
+
+            let ma= (n1+n2*2 + n3*3 + n4*4 + me)/11
+            let conceito = fconceito(ma)
+            let situacao = fsituacao(conceito)
+            document.getElementById("resp").innerHTML= 
+            "RA: " + ra 
+            + "<br> nome: " + nome 
+            + "<br> nota 1: " + n1 
+            + "<br> nota 2: " + n2
+            + "<br> nota 3: " + n3
+            + "<br> nota 4: " + n4
+            + "<br> Média exercícios: " + me
+            + "<br> Média aproveitamento: " + ma
+            + "<br> conceito: " + conceito
+            + "<br> situação: " + situacao
+        }
+
+        function fconceito(ma){
+            let conceito = ""
+            if(ma >= 9.0){
+                conceito = "A"
+            }else if(ma >= 7.5 && ma < 9.0){
+                conceito = "B"
+            }else if(ma >= 6.0 && ma < 7.5){
+                conceito = "C"
+            }else if(ma >= 4.0 && ma < 6.0){
+                conceito = "D"
+            }else{
+                conceito = "E"
+            }
+            return conceito
+        }
+
+        function fsituacao(conceito){
+            let situacao = ""
+            if(conceito == "A" || conceito == "B" || conceito == "C"){
+                situacao = "APROVADO"
+            }else{
+                situacao = "REPROVADO"
+            }
+            return situacao
+        }
+    </script>
+</body>
+
+<footer>
+    Atenção: Verifique se todas as notas foram preenchidas corretamente!
+</footer>
+
+</html>
