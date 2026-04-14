@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="estacionamento.css"> 
+</head>
+<body>
+    <header>Faça seu cadastro</header>
+
+    <main>
+        <h1>Sistema de Tarifação de Estacionamento</h1>
+
+        <label for="inputhoras">Horas estacionadas</label>
+        <input type="number" id="inputhoras" placeholder="ex: 5">
+        <br>
+        <label for="inputcarro">O carro é grande?</label>
+        <input type="checkbox" id="inputcarro">
+        <br>
+        <label for="inputcliente">É cliente frequente?</label>
+        <input type="checkbox" id="inputcliente">
+        <br>
+        <input type="button" value="Calcular Tarifa" onclick="fcalcular()">
+        <br>
+        <span id="resp"></span>
+    </main>
+
+    <footer>Verifique se os dados estão corretos</footer>
+    <script src="estacionamento.js"></script>
+</body>
+</html>

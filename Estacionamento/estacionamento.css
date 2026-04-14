@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, #e6ccff, #cc99ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #9933ff;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 4px solid #7a1fd1;
+}
+
+main {
+    background-color: white;
+    width: 350px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+main::before {
+    content: "💜";
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #9933ff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #6600cc;
+    font-weight: 500;
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #cc99ff;
+    margin-top: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #9933ff;
+    box-shadow: 0 0 5px #cc99ff;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-top: 10px;
+}
+
+input[type="button"] {
+    margin-top: 20px;
+    background-color: #9933ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(153, 51, 255, 0.4);
+}
+
+input[type="button"]:hover {
+    background-color: #7a1fd1;
+    transform: scale(1.05);
+}
+
+input[type="button"]:active {
+    transform: scale(0.98);
+}
+
+#resp {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4d0099;
+    background-color: #f2e6ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #b366ff;
+    color: white;
+    font-size: 14px;
+}
