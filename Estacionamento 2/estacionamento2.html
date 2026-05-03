@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="estacionamento2.css"> 
+</head>
+
+<body>
+
+    <header>Faça seu cadastro</header>
+
+    <main>
+        <h1>Sistema de Tarifação de Estacionamento</h1>
+
+        <label for="inputCheckin">Data e hora de entrada</label>
+        <input type="datetime-local" id="inputCheckin">
+
+        <label for="inputCheckout">Data e hora de saída</label>
+        <input type="datetime-local" id="inputCheckout">
+
+        <label for="inputcarro">O carro é grande?</label>
+        <input type="checkbox" id="inputcarro">
+
+        <label for="inputcliente">É cliente frequente?</label>
+        <input type="checkbox" id="inputcliente">
+
+        <input type="button" value="Calcular Tarifa" onclick="fcalcular()">
+
+        <span id="resp"></span>
+    </main>
+
+    <footer>Verifique se os dados estão corretos</footer>
+
+    <script src="estacionamento2.js"></script>
+
+</body>
+</html>
