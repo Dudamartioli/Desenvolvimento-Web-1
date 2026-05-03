@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC (Índice de Massa Corporal)</title>
+    <link rel="stylesheet" href="IMC.css"> <!-- ATENÇAOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+</head>
+<body>
+    
+    <header>
+        <h1>Descubra o seu IMC!</h1>
+    </header>
+
+    <main>
+        <section class="card">
+        <label for="inputp">Peso (em kg)</label>
+        <input type="number" name="inputp" id="inputp">
+        <br>
+        <label for="inputa">Altura (em metros)</label>
+        <input type="number" name="inputa" id="inputa">
+        <br>
+        <input type="button" value="calcular" onclick="fcalcular()">
+        <br>
+        <span id="resp"></span>
+        </section>
+    </main>
+
+    <footer>
+        <p>Confira se os dados estão corretos!</p>
+    </footer>
+
+    <script src="IMC.js"></script>
+
+</body>
+</html>
+
+

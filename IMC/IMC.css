@@ -1,0 +1,106 @@
+/* reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* fundo com gradiente suave */
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e9d5ff, #c4b5fd, #a78bfa);
+}
+
+/* header e footer */
+header, footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* centralização */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card estilo glass */
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.7);
+    transition: 0.2s;
+}
+
+input:focus {
+    background: white;
+    box-shadow: 0 0 5px #a855f7;
+}
+
+/* botão estiloso */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #9333ea, #7e22ce);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* erro */
+#erro {
+    margin-top: 10px;
+    padding: 10px;
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    display: none;
+}
+
+/* resultado */
+#resp {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4c1d95;
+}
